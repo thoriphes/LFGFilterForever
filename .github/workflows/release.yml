@@ -1,0 +1,23 @@
+# Push a tag (v1.3.0, v1.3.1, ...) -> BigWigs packager builds LFGFilterForever-<tag>-forever.zip and
+# uploads it to CurseForge (project ID from the TOC's X-Curse-Project-ID, token = repo secret
+# CF_API_KEY) and to a GitHub release.
+name: Package and release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    env:
+      CF_API_KEY: ${{ secrets.CF_API_KEY }}
+      GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: BigWigsMods/packager@v2

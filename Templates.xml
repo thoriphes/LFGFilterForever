@@ -1,0 +1,82 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
+
+    <!-- One checkbox cell, drawn like Blizzard's menu checkboxes (MenuVariants.CreateCheckbox).
+         Cross = the third state of the Groups tank/healer cells. -->
+    <Button name="LFGFilterForeverCheckTemplate" virtual="true">
+        <Size x="118" y="22"/>
+        <Layers>
+            <Layer level="ARTWORK">
+                <Texture parentKey="Box" atlas="common-dropdown-ticksquare" useAtlasSize="true">
+                    <Anchors>
+                        <Anchor point="LEFT"/>
+                    </Anchors>
+                </Texture>
+                <FontString parentKey="Text" inherits="GameFontHighlight" justifyH="LEFT" wordwrap="false">
+                    <Size y="20"/>
+                    <Anchors>
+                        <Anchor point="LEFT" relativeKey="$parent.Box" relativePoint="RIGHT" x="7" y="1"/>
+                        <Anchor point="RIGHT"/>
+                    </Anchors>
+                </FontString>
+            </Layer>
+            <Layer level="ARTWORK" textureSubLevel="1">
+                <Texture parentKey="Check" atlas="common-dropdown-icon-checkmark-yellow" useAtlasSize="true">
+                    <Anchors>
+                        <Anchor point="CENTER" relativeKey="$parent.Box" x="2" y="1"/>
+                    </Anchors>
+                </Texture>
+                <Texture parentKey="Cross" file="Interface\RaidFrame\ReadyCheck-NotReady" hidden="true">
+                    <Size x="14" y="14"/>
+                    <Anchors>
+                        <Anchor point="CENTER" relativeKey="$parent.Box"/>
+                    </Anchors>
+                </Texture>
+            </Layer>
+        </Layers>
+        <HighlightTexture file="Interface\QuestFrame\UI-QuestTitleHighlight" alphaMode="ADD"/>
+    </Button>
+
+    <!-- A row of three cells, so the roles, the 9 classes and the group checks line up in columns. -->
+    <Frame name="LFGFilterForeverCheckRowTemplate" virtual="true">
+        <Size x="354" y="22"/>
+        <Frames>
+            <Button parentKey="Cell1" inherits="LFGFilterForeverCheckTemplate">
+                <Anchors>
+                    <Anchor point="LEFT"/>
+                </Anchors>
+            </Button>
+            <Button parentKey="Cell2" inherits="LFGFilterForeverCheckTemplate">
+                <Anchors>
+                    <Anchor point="LEFT" relativeKey="$parent.Cell1" relativePoint="RIGHT"/>
+                </Anchors>
+            </Button>
+            <Button parentKey="Cell3" inherits="LFGFilterForeverCheckTemplate">
+                <Anchors>
+                    <Anchor point="LEFT" relativeKey="$parent.Cell2" relativePoint="RIGHT"/>
+                </Anchors>
+            </Button>
+        </Frames>
+    </Frame>
+
+    <!-- "Level" + Blizzard's AH level boxes (LevelRangeFrameTemplate). -->
+    <Frame name="LFGFilterForeverLevelRowTemplate" virtual="true">
+        <Size x="354" y="26"/>
+        <Layers>
+            <Layer level="ARTWORK">
+                <FontString parentKey="Label" inherits="GameFontHighlight" text="LEVEL" justifyH="LEFT">
+                    <Anchors>
+                        <Anchor point="LEFT" x="0" y="1"/>
+                    </Anchors>
+                </FontString>
+            </Layer>
+        </Layers>
+        <Frames>
+            <Frame parentKey="Range" inherits="LevelRangeFrameTemplate">
+                <Anchors>
+                    <Anchor point="LEFT" relativeKey="$parent.Label" relativePoint="RIGHT" x="4" y="-1"/>
+                </Anchors>
+            </Frame>
+        </Frames>
+    </Frame>
+</Ui>

@@ -1,0 +1,23 @@
+## Interface: 16001
+## Title: LFG Filter Forever
+## Notes: Filter the Looking For Group list: players by level, role and class; groups by tank, healer and an open DPS spot.
+## Notes-deDE: Filtert die Gruppensuche: Spieler nach Stufe, Rolle und Klasse; Gruppen nach Tank, Heiler und freiem DPS-Platz.
+## Notes-esES: Filtra la lista de Buscar grupo: jugadores por nivel, rol y clase; grupos por tanque, sanador y hueco de DPS.
+## Notes-esMX: Filtra la lista de Buscar grupo: jugadores por nivel, rol y clase; grupos por tanque, sanador y hueco de DPS.
+## Notes-frFR: Filtre la recherche de groupe : joueurs par niveau, rôle et classe ; groupes par tank, soigneur et place DPS libre.
+## Notes-itIT: Filtra la ricerca gruppi: giocatori per livello, ruolo e classe; gruppi per difensore, guaritore e posto DPS libero.
+## Notes-koKR: 파티 찾기 목록 필터: 플레이어는 레벨, 역할, 직업으로, 파티는 탱커, 힐러, 빈 딜러 자리로.
+## Notes-ptBR: Filtra a lista de Procurar Grupo: jogadores por nível, função e classe; grupos por tanque, curador e vaga de DPS.
+## Notes-ruRU: Фильтр поиска группы: игроки по уровню, роли и классу; группы по танку, лекарю и свободному месту бойца.
+## Notes-zhCN: 筛选寻求组队列表：玩家按等级、职责和职业；队伍按坦克、治疗和输出空位。
+## Notes-zhTW: 篩選尋求組隊列表：玩家依等級、角色和職業；隊伍依坦克、治療和輸出空位。
+## Author: thoriphes
+## Version: @project-version@
+## X-License: MIT
+## X-Website: https://github.com/thoriphes/LFGFilterForever
+## IconTexture: Interface\Icons\INV_Misc_Spyglass_03
+## SavedVariables: LFGFilterForeverDB
+
+Locales.lua
+Templates.xml
+LFGFilterForever.lua
