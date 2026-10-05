@@ -15,6 +15,7 @@
 ## Version: @project-version@
 ## X-License: MIT
 ## X-Website: https://github.com/thoriphes/LFGFilterForever
+## X-Curse-Project-ID: 1728913
 ## IconTexture: Interface\Icons\INV_Misc_Spyglass_03
 ## SavedVariables: LFGFilterForeverDB
 
